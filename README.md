@@ -9,11 +9,11 @@ This Repository contains python codes for hyperspectral image unmixing
 ~~~~~~~~
  NMF.py
 ~~~~~~~~
-/*  --------------------------------------  */
-/*  NMF (Nonnegative Matrix Factorization)  */
-/*  mathematical model: Y - A * S           */
-/*  where Y is known and A , S are unknown  */
-/*  --------------------------------------  */
+//  --------------------------------------  //
+//  NMF (Nonnegative Matrix Factorization)  //
+//  mathematical model: Y - A * S           //
+//  where Y is known and A , S are unknown  //
+//  --------------------------------------  //
 Functions included:
 LSMU() ( Lee Seung Multiplicative Update        )
 HALS() ( Hierarchical Alternating Least Squares )
@@ -25,12 +25,12 @@ NNLS() ( Alternating Nonnegative Least Squares  )
 ~~~~~~~~
 Functions included:
 SPA() (Successive Projection Algorithm)
-/*  -------------------------------------------  */
-/*  SPA helps identified the purest spectral     */
-/*  signitures from a given Hyperspectral image  */
-/*  if pure pixel assumption is ensured and      */
-/*  the number of existing substance is known    */
-/*  -------------------------------------------  */
+//  -------------------------------------------  //
+//  SPA helps identified the purest spectral     //
+//  signitures from a given Hyperspectral image  //
+//  if pure pixel assumption is ensured and      //
+//  the number of existing substance is known    //
+//  -------------------------------------------  //
 
 
 STOP()         ( pause the system from running if a file 'stop' is detected                   )
