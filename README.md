@@ -3,21 +3,46 @@ hyperspec_unmix
 
 This Repository contains python codes for hyperspectral image unmixing
 
-Algorithm included:
-NMF (Nonnegative Matrix Factorization)
+==============
+ Code Summary
+==============
+~~~~~~~~
+ NMF.py
+~~~~~~~~
+/*  --------------------------------------  */
+/*  NMF (Nonnegative Matrix Factorization)  */
+/*  mathematical model: Y - A * S           */
+/*  where Y is known and A , S are unknown  */
+/*  --------------------------------------  */
+Functions included:
+LSMU() ( Lee Seung Multiplicative Update        )
+HALS() ( Hierarchical Alternating Least Squares )
+NNLS() ( Alternating Nonnegative Least Squares  )
 
-- math model: Y = A*S
-- method used:
-- > Lee Seung Multiplicative Update (LSMU)
-- > Hierarchical Alternating Least Squares (HALS)
-- > Alternating Nonnegative Least Squares (NNLS)
 
-SPA (Successive Projection Algorithm)
+~~~~~~~~
+ DSP.py
+~~~~~~~~
+Functions included:
+SPA() (Successive Projection Algorithm)
+/*  -------------------------------------------  */
+/*  SPA helps identified the purest spectral     */
+/*  signitures from a given Hyperspectral image  */
+/*  if pure pixel assumption is ensured and      */
+/*  the number of existing substance is known    */
+/*  -------------------------------------------  */
 
-General Utilities
+
+STOP()         ( pause the system from running if a file 'stop' is detected                   )
+READMATRIX()   ( read a general matrix from a text file                                       )
+READUSGSDATA() ( read hyperspectral signature data provided by USGS Spectroscopy Lab. Library )
+               ( link: http://speclab.cr.usgs.gov/spectral.lib06/ds231/datatable.html         )
+PLOT()         ( a function similar to MATLAB(R) plot by using python library matplotlib.plot )
 
 
-Background:
+===================
+ Theory Background
+===================
 Hyperspectral Image Unmixing using Nonnegative Matrix factorization
 
 Hyperspectral unmixing (HU) has become a popular research topic in many applications.
