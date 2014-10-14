@@ -9,8 +9,8 @@ NMF (Nonnegative Matrix Factorization)
 - math model: Y = A*S
 - method used:
 - > Lee Seung Multiplicative Update (LSMU)
-- > using Hierarchical Alternating Least Squares (HALS)
-- > using Alternating Nonnegative Least Squares (NNLS)
+- > Hierarchical Alternating Least Squares (HALS)
+- > Alternating Nonnegative Least Squares (NNLS)
 
 SPA (Successive Projection Algorithm)
 
