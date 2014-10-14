@@ -1,0 +1,107 @@
+Clark and others 2007 USGS Data Series 231
+Spectral Library splib06a Sample Description
+
+(For further information on spectroscopy, see: http://speclab.cr.usgs.gov) 
+TITLE: Chlorite SMR-13 DESCRIPT
+
+DOCUMENTATION_FORMAT: MINERAL
+
+SAMPLE_ID: SMR-13a
+
+MINERAL_TYPE: Phyllosilicate
+
+MINERAL: Chlorite Mg-rich (Chlorite group)
+
+FORMULA: (Mg,Fe)3(Si,Al)4O10(OH)2-(Mg,Fe)3(OH)6
+
+FORMULA_HTML: (Mg,Fe)3(Si,Al)4O10(OH)2-(Mg,Fe)3(OH)6
+
+COLLECTION_LOCALITY: Not available
+
+ORIGINAL_DONOR: Gene Whitney, USGS Denver
+
+CURRENT_SAMPLE_LOCATION: U.S.G.S. Denver Spectroscopy Laboratory.
+
+ULTIMATE_SAMPLE_LOCATION: U.S.G.S. Denver Spectroscopy Laboratory.
+
+SAMPLE_DESCRIPTION:
+
+Sample was ground in an alumina mortar and pestle and wet sieved with methanol into less than 30µm (e), 30-45µm (d), 45-60µm (c), 60-104µm (b), and 104-150µm (a) size fractions. (Letter denotes spectrum designation)
+
+King, T.V.V. and R.N. Clark, 1989, Spectral Characteristics of Chlorites and Mg-Serpentines Using high-Resolution Reflectance Spectroscopy. Jour. Geophys. Res., 13.997-14,008.
+
+IMAGE_OF_SAMPLE: 
+NO PHOTO 
+END_SAMPLE_DESCRIPTION.
+
+XRD_ANALYSIS:
+
+Sample was analyzed and found to be a Mg-rich chlorite. (King and Clark, 1989)
+
+END_XRD_ANALYSIS.
+
+COMPOSITIONAL_ANALYSIS_TYPE: EM(WDS) # XRF, EM(WDS), ICP(Trace), WChem 
+
+COMPOSITION
+KEYWORD	Oxide 
+ASCII	Amount	Weight
+Percent, %	Oxide
+html
+COMPOSITION:	SiO2	 31.00	wt%	SiO2
+COMPOSITION:	TiO2	 0.08	wt%	TiO2
+COMPOSITION:	Al2O3	17.30	wt%	Al2O3
+COMPOSITION:	Fe2O3	 8.34	wt%	Fe2O3
+COMPOSITION:	MnO	 0.12	wt%	MnO
+COMPOSITION:	MgO	 30.20	wt%	MgO
+COMPOSITION:	CaO	 0.02	wt%	CaO
+COMPOSITION:	Na2O	 0.23	wt%	Na2O
+COMPOSITION:	K2O	 less than 0.02	wt%	K2O
+COMPOSITION:	P2O5	 less than 0.05	wt%	P2O5
+COMPOSITION:	LOI	 12.30	wt%	LOI
+COMPOSITION:	Total	 99.66	wt%
+COMPOSITION:	O=Cl,F,S		wt%	#correction for Cl, F, S
+COMPOSITION:	New Total		wt%
+COMPOSITION_TRACE: None
+
+COMPOSITION_DISCUSSION:
+
+Compositional data provided by Gene Whitney. King, T.V.V. and R.N. Clark, 1989, Spectral Characteristics of Chlorites and Mg-Serpentines Using high-Resolution Reflectance Spectroscopy. Jour. Geophys. Res., 13.997-14,008.
+
+END_COMPOSITION_DISCUSSION.
+
+MICROSCOPIC_EXAMINATION:
+
+Microscopically this appears to be a pure chlorite sample. All size fractions were examined visually and by energy dispersive methods to insure chemical homogeneity as a function of grain size interval. Plates about 10 µm thick. G.Swayze.
+
+END_MICROSCOPIC_EXAMINATION.
+
+SPECTROSCOPIC_DISCUSSION:
+
+END_SPECTROSCOPIC_DISCUSSION.
+
+SPECTRAL_PURITY: 1a2a3a4_ # 1= 0.2-3, 2= 1.5-6, 3= 6-25, 4= 20-150 microns
+
+SPECTRAL_PURITY: 1b2b3b4_ # < 30um fraction # 1= 0.2-3, 2= 1.5-6, 3= 6-25, 4= 20-150 microns
+
+LIB_SPECTRA_HED:	 where	 Wave Range	 Av_Rs_Pwr	 Comment
+LIB_SPECTRA:	 splib04a r 961	 0.2-2.7µm	 200	 g.s.=115µm
+LIB_SPECTRA:	 splib04a r 973	 0.2-2.7µm	 200	 g.s.=70µm
+LIB_SPECTRA:	 splib04a r 985	 0.2-2.7µm	 200	 g.s.=49µm
+LIB_SPECTRA:	 splib04a r 997	 0.2-2.7µm	 200	 g.s.=33µm
+LIB_SPECTRA:	 splib04a r 1009	 0.2-2.7µm	 200	 g.s.=15µm
+LIB_SPECTRA:	 splib05a r 1697	 1.3-5.3µm	 200	 g.s.=115µm
+LIB_SPECTRA:	 splib05a r 1738	 0.2-2.7µm	 200	 g.s.=70µm
+LIB_SPECTRA:	 splib05a r 1752	 0.2-2.7µm	 200	 g.s.=49µm
+LIB_SPECTRA:	 splib05a r 1766	 0.2-2.7µm	 200	 g.s.=33µm
+LIB_SPECTRA:	 splib05a r 1780	 0.2-2.7µm	 200	 g.s.=15µm
+LIB_SPECTRA:	 splib05a r 1794	 0.2-3.0µm	 200	 g.s.=
+LIB_SPECTRA:	 splib06a r 4805			 g.s.=
+LIB_SPECTRA:	 splib06a r 4847			 g.s.=
+LIB_SPECTRA:	 splib06a r 4862			 g.s.=
+LIB_SPECTRA:	 splib06a r 4908			 g.s.=
+LIB_SPECTRA:	 splib06a r 4923			 g.s.=
+LIB_SPECTRA:	 splib06a r 4938			 g.s.=
+LIB_SPECTRA:	 splib06a r 4984			 g.s.=
+LIB_SPECTRA:	 splib06a r 4999			 g.s.=
+LIB_SPECTRA:	 splib06a r 5045			 g.s.=
+LIB_SPECTRA:	 splib06a r 5063			 g.s.=
