@@ -11,11 +11,15 @@ This repository contains python codes for hyperspectral image unmixing
 ~~~~~~~~
 
 NMF (Nonnegative Matrix Factorization)
+
 mathematical model: Y - A * S         
+
 where Y is known and A , S are unknown
 
 Requires Python library "numpy" , "scipy"
+
 Functions included:
+
 LSMU()
 - Lee Seung Multiplicative Update
 
@@ -30,6 +34,7 @@ NNLS()
  DSP.py 
 ~~~~~~~~
 Requires Python library "numpy" , "matplotlib"
+
 Functions included:
 
 SPA() (Successive Projection Algorithm)
