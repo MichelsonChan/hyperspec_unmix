@@ -15,10 +15,36 @@ import matplotlib.pyplot as plt
 # function definition #
 # =================== #
 
+
+# === #
+# LOG #
+# === #
+def LOG( actionStr , arg1 , arg2 , arg3 ) :
+	if actionStr == 'log matrix to file' :
+		fileNameStr = arg1
+		matrix      = arg2
+		delimStr    = arg3
+		# =============================== #
+		# check if the provided file name #
+		# already exists in the directory #
+		# =============================== #
+		if os.path.isfile( fileNameStr ) :
+			os.remove( fileNameStr )
+		fileObject  = open( fileNameStr , 'w' )
+		M , N = matrix.shape
+		i , j = 0 , 0
+		for i in range( 0 , M ) :
+			for j in range( 0 , N ) :
+				fileObject.write( str( matrix[i][j] ) + delimStr )
+			fileObject.write( '\n' )
+		fileObject.close()
+		return
+
+
 # ==== #
 # STOP #
 # ==== #
-def STOP():
+def STOP() :
 	if os.path.isfile('stop') :
 		# a stopping request exists
 		print "A stopping request is found ! System paused !"
@@ -30,7 +56,7 @@ def STOP():
 # ========== #
 # READMATRIX #
 # ========== #
-def READMATRIX( fileName , delimStr ):
+def READMATRIX( fileName , delimStr ) :
 
 # ===================================================== #
 # fileName is the file located in current directory     #
@@ -44,7 +70,7 @@ def READMATRIX( fileName , delimStr ):
 # ============ #
 # READUSGSDATA #
 # ============ #
-def READUSGSDATA( fileName ):
+def READUSGSDATA( fileName ) :
 
 # =============================== #
 # same as READMATRIX()            #
@@ -56,7 +82,7 @@ def READUSGSDATA( fileName ):
 # ==== #
 # PLOT #
 # ==== #
-def PLOT( y , x=None , yLabel=None , xLabel=None , title=None , axis=None , grid=None ):
+def PLOT( y , x=None , yLabel=None , xLabel=None , title=None , axis=None , grid=None ) :
 	
 	#plt.ion() # enable interactive mode
 	
@@ -99,7 +125,7 @@ def PLOT( y , x=None , yLabel=None , xLabel=None , title=None , axis=None , grid
 # === #
 # SPA #
 # === #
-def SPA( Y , N ):
+def SPA( Y , N ) :
 
 # ===================== #
 # Y is assumed to be of #
@@ -113,11 +139,11 @@ def SPA( Y , N ):
 	PPI         = np.zeros( N )
 	SPA_ProjMat = np.eye( Y.shape[0] )
 
- 	for i in range(0,N): # same as for(i=0;i<N;i++)
+ 	for i in range(0,N) : # same as for(i=0;i<N;i++)
 
 		normSquareArray = np.zeros( Y.shape[1] )
 
-		for j in range(0,Y.shape[1]):
+		for j in range(0,Y.shape[1]) :
 			normSquareArray[j] = LA.norm(np.dot(SPA_ProjMat,Y[:,j:j+1]),2)
 		# =================================== #
 		# strongest endmember power detection #
