@@ -44,13 +44,26 @@ def LOG( actionStr , arg1 , arg2 , arg3 ) :
 # ==== #
 # STOP #
 # ==== #
-def STOP() :
-	if os.path.isfile('stop') :
-		# a stopping request exists
-		print "A stopping request is found ! System paused !"
-		print "Press enter/return to continue ..."
-		raw_inpiut()
-	return
+def STOP( stopFileNameStr=None ) :
+	if stopFileNameStr == None :
+		if os.path.isfile('stop') :
+			# a stopping request exists
+			print "A stopping request is found ! System paused !"
+			print "Press enter/return to continue ..."
+			raw_inpiut()
+		return
+	else :
+		if os.path.isfile( stopFileNameStr ) :
+			# a stop file is found
+			print "A stopping request is found from file " + stopFileNameStr + " !"
+			print "Press N to continue ..."
+			print "Press Y to remove " + stopFileNameStr + " and continue ..."
+			userInput = raw_input()
+			if userInput == "N" :
+				return
+			elif userInput == "Y" :
+				os.path.remove( stopFileNameStr )
+				return
 
 
 # ========== #
@@ -162,3 +175,42 @@ def SPA( Y , N ) :
 
 	return ENDMEM , PPI
 
+
+# ============= #
+# VEC2SPARSEVEC #
+# ============= #
+def VEC2SPARSEVEC( vec ) :
+	# =========================================== #
+	# vec is assumed to be a sparse column vector #
+	# =========================================== #
+	N = vec.shape[0]
+	sparsevec     = np.zeros( [ N , 2 ] )
+	Idx_sparsevec = 0 # for output sparse vector value assignment
+	for i in range( 0 , N ) :
+		if vec[i] != 0 :
+			sparsevec[ Idx_sparsevec , 0 ] = i
+			sparsevec[ Idx_sparsevec , 1 ] = vec[i]
+			Idx_sparsevec += 1
+	# ========================================================== #
+	# trancate the unnecessary (all-zeros) part of sparse vector #
+	# ========================================================== #
+	sparsevec = sparsevec[ 0 : Idx_sparsevec , : ]
+	return sparsevec
+
+
+# ============= #
+# SPARSEVEC2VEC #
+# ============= #
+def SPARSEVEC2VEC( sparsevec , vectorSize=0 ) :
+	# ============================================ #
+	# sparsevec is assumed to be a 2-column matrix #
+	# indicating the sparseness of a column vector #
+	# ============================================ #
+	sparseFileSize = sparsevec.shape[0]
+	if vectorSize == 0 :
+		vector = np.zeros( [ sparsevec[ sparseFileSize - 1 , 0 ] + 1 , 1 ] )
+	elif vectorSize > 0 :
+		vector = np.zeros( [ vectorSize , 1 ] )
+	for i in range( 0 , sparseFileSize ) :
+		vector[ sparsevec[ i , 0 ] ] = sparsevec[ i , 1 ]
+	return vector
