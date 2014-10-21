@@ -62,7 +62,7 @@ def STOP( stopFileNameStr=None ) :
 			if userInput == "N" :
 				return
 			elif userInput == "Y" :
-				os.path.remove( stopFileNameStr )
+				os.remove( stopFileNameStr )
 				return
 
 
