@@ -142,7 +142,7 @@ def PLOT( y , x=None , yLabel=None , xLabel=None , title=None , axis=None , grid
 # ==== #
 # NNLS #
 # ==== #
-def NNLS( Y , A , S ) :
+def NNLS( Y , A ) :
 # ============================================ #
 # this NNLS from DSP package is different from #
 # that from NMF package.    NMF.NNLS returns 2 #
@@ -176,8 +176,8 @@ def NNLS( Y , A , S ) :
 	# ===================== #
 	modelOrder = A.shape[1]
 	for j in range( 0 , Y.shape[1] ) :
-		S_j = scipy.optimize( A , Y )[0]
-	return S_j
+		S = scipy.optimize( A , Y )[0]
+	return S
 
 
 
