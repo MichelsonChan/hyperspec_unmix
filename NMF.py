@@ -32,7 +32,7 @@ def NNLS( Y , A , S , iteraNum , firstUpdateMatrixFlag ) :
 		# check dimension of Y and A #
 		# ========================== #
 		if Y.shape[0] != A.shape[0] :
-			print "Error @ DSP.NNLS() : dimension of Y and A mismatch !!!"
+			print "Error @ NMF.NNLS() : dimension of Y and A mismatch !!!"
 			print "Press any key to stop ..."
 			raw_input()
 			err

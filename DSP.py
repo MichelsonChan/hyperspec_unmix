@@ -10,6 +10,7 @@ import numpy as np
 from numpy import linalg as LA
 from numpy import genfromtxt
 import matplotlib.pyplot as plt
+import scipy
 
 # =================== #
 # function definition #
@@ -136,6 +137,48 @@ def PLOT( y , x=None , yLabel=None , xLabel=None , title=None , axis=None , grid
 	#plt.show()
 	
 	return
+
+
+# ==== #
+# NNLS #
+# ==== #
+def NNLS( Y , A , S ) :
+# ============================================ #
+# this NNLS from DSP package is different from #
+# that from NMF package.    NMF.NNLS returns 2 #
+# matrices namely A and S which is a complete  #
+# result of the NMF process NNLS from DSP      #
+# packages performs a 1-time NNLS process such #
+# that people can break down large scale of    #
+# matrix factorization into many small pieces  #
+# ============================================ #
+#
+# mathematical model : Y = A * S
+# S <- DSP.NNLS( || Y - A*S || )
+# 
+# =============================================== #
+# for a mass data Y, when memory is insufficient, #
+# the following breakdown can solve this issue    #
+# S[k] = DSP.NNLS( Y[k] , A_init , S_init[k] )    #
+#                                                 #
+# if A is to be updated instead,                  #
+# reform the input such that the model shifts to  #
+# A' <- DSP.NNLS( || Y' - S'*A' || )              #
+# =============================================== #	
+	if Y.shape[0] != A.shape[0] or Y.shape[1] != A.shape[1] :
+		print "Error @ DSP.NNLS() : dimensimismatch !!!"
+		print "Press any key to stop ..."
+		raw_input()
+		err
+		return -1
+	# ===================== #
+	# initialize modelOrder #
+	# ===================== #
+	modelOrder = A.shape[1]
+	for j in range( 0 , Y.shape[1] ) :
+		S_j = scipy.optimize( A , Y )[0]
+	return S_j
+
 
 
 # === #
