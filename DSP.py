@@ -69,7 +69,7 @@ def STOP( stopFileNameStr=None ) :
 # ========== #
 # READMATRIX #
 # ========== #
-def READMATRIX( fileName , delimStr ) :
+def READMATRIX( fileName , delimStr=None ) :
 
 # ===================================================== #
 # fileName is the file located in current directory     #
@@ -77,7 +77,10 @@ def READMATRIX( fileName , delimStr ) :
 # if USGS Library ASCII data is to be read,             #
 # delimStr will be '     ' ( 5 white spaces )           #
 # ===================================================== #
-	return genfromtxt( fileName , delimiter=delimStr )
+	if( delimStr==None ) :
+		return genfromtxt( fileName , delimiter=' ' )
+	else :
+		return genfromtxt( fileName , delimiter=delimStr )
 
 
 # ============ #
