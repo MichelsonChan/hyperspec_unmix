@@ -78,7 +78,7 @@ def READMATRIX( fileName , delimStr=None ) :
 # delimStr will be '     ' ( 5 white spaces )           #
 # ===================================================== #
 	if delimStr==None :
-		return genfromtxt( fileName , '' )
+		return genfromtxt( fileName , delimiter='' )
 	else :
 		return genfromtxt( fileName , delimiter=delimStr )
 
