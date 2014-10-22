@@ -77,8 +77,8 @@ def READMATRIX( fileName , delimStr=None ) :
 # if USGS Library ASCII data is to be read,             #
 # delimStr will be '     ' ( 5 white spaces )           #
 # ===================================================== #
-	if( delimStr==None ) :
-		return genfromtxt( fileName , delimiter=' ' )
+	if delimStr==None :
+		return genfromtxt( fileName , '' )
 	else :
 		return genfromtxt( fileName , delimiter=delimStr )
 
